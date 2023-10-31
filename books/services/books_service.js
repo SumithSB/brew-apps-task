@@ -15,16 +15,20 @@ bookService.getBooks = async () => {
 };
 
 bookService.getBookDetails = async (bookId) => {
-  const book = await BooksModel.findOne({ _id: bookId });
-  if (book) {
-    return book;
+  try {
+    const book = await BooksModel.findOne({ _id: bookId });
+    if (book) {
+      return book;
+    }
+    console.log(`Book with id:${bookId} not found`);
+    return `Book with id:${bookId} not found`;
+  } catch (e) {
+    return `Internal server error ${e}`;
   }
-  console.log(`Book with id:${bookId} not found`);
-  return `Book with id:${bookId} not found`;
 };
 
 bookService.updateBookDetails = async (bookId, details) => {
-  const book = await BooksModel.findOneAndUpdate({ _id: bookId }, details, { upsert: true, new: true });
+  const book = await BooksModel.findOneAndUpdate({ _id: bookId }, details, { upsert: true, new: false });
   if (book) {
     return book;
   }

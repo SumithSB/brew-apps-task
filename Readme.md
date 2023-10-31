@@ -2,149 +2,153 @@
 
 ## API Docs
 
-### Create a job Posting
+### Create a book Posting
 
 ```json
-route : 'api/v1/job/create'
+route : 'api/v1/book'
 request: POST
 
 body: {
-    "title": "Full Stack Developer",
-    "company": "Google",
-    "location": "Remote",
-    "description": "As a Full Stack Developer at [Your Company Name], you will play a pivotal role in the end-to-end development of our applications. You'll work on both the client and server sides, collaborating with cross-functional teams to deliver innovative solutions. If you're an adaptable and creative problem solver, this is the opportunity for you.",
-    "applicationDeadline": "2023-11-30",
-    "companyLogo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+    "title": "Rich Dad Poor Dad",
+    "author": " Robert T. Kiyosaki",
+    "summary": "April of 2022 marks a 25-year milestone for the personal finance classic Rich Dad Poor Dad that still ranks as the #1 Personal Finance book of all time. And although 25 years have passed since Rich Dad Poor Dad was first published,readers will find that very little in the book itself has changed ― and for good reason. While so much in our world is changing a high speed, the lessons about money and the principles of Rich Dad Poor Dad haven’t changed. Today, as money continues to play a key role in our daily lives, the messages in Robert Kiyosaki’s international bestseller are more timely and more important than ever."
 }
 
 response:
 {
     "result": {
-        "jobId": "6536920b100cf10b1c79eb61",
-        "message": "Job posting created successfully!"
+        "bookId": "653fa755697e9f0a2e74d1de",
+        "message": "Book added successfully!"
     },
     "status": "SUCCESS"
 }
 ```
 
-### Get list of jobs
+### Get list of books
 
 ```json
-route : '/api/v1/job'
+route : '/api/v1/book'
 request: Get
 
 response:
 {
     "result": [
         {
-            "_id": "653691b2100cf10b1c79eb5b",
-            "title": "Mobile App Developer",
-            "company": "Google",
-            "location": "Bangalore",
-            "description": "As a Mobile App Developer at [Your Company Name], you will play a crucial role in the development, testing, and maintenance of mobile applications. You'll work closely with our team of designers and other developers to create apps that deliver exceptional user experiences. You should be passionate about staying up-to-date with the latest trends in mobile app development and have a strong desire to innovate and push the boundaries of what's possible in the mobile space.",
-            "applicationDeadline": "2023-11-30T00:00:00.000Z",
-            "companyLogo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-            "postedAt": "2023-10-23T15:30:58.856Z",
+            "_id": "653fa5cd2ee0c05683c250d6",
+            "title": "Founder's Office",
+            "author": "Sarthak Ahuja",
+            "summary": "This book is a collection of 150 impactful lessons I’ve collated over the 11 years of working with organizations of different sizes and through an extensive study on business in general.Treat it like a deck of cards with each containing a useful note, rather than one long book you need to read in order.",
+            "createdAt": "2023-10-30T12:47:09.164Z",
+            "updatedAt": "2023-10-30T12:48:27.376Z",
             "__v": 0
         },
         {
-            "_id": "653691e2100cf10b1c79eb5e",
-            "title": "Backend Developer",
-            "company": "Google",
-            "location": "Remote",
-            "description": "As a Backend Developer at [Your Company Name], you will play a vital role in designing, developing, and maintaining the server-side components of our applications. Your responsibilities will include implementing efficient and secure APIs, optimizing database queries, and collaborating with our front-end developers to deliver seamless user experiences. If you thrive in a collaborative and innovative environment, we'd love to have you on board.",
-            "applicationDeadline": "2023-11-30T00:00:00.000Z",
-            "companyLogo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-            "postedAt": "2023-10-23T15:31:46.066Z",
+            "_id": "653fa6682ee0c05683c250dd",
+            "title": "The 5 Am Club",
+            "author": "Robin Sharma",
+            "summary": "Part manifesto for mastery, part playbook for genius-grade productivity and part companion for a life lived beautifully, the 5 am club is a work that will transform your life. Forever.Legendary leadership and elite performance expert Robin Sharma introduced The 5 AM Club concept over twenty years ago, based on a revolutionary morning routine that has helped his clients maximize their productivity, activate their best health and bulletproof their serenity in this age of overwhelming complexity.Now, in this life-changing book, handcrafted by the author over a rigorous four year period, you will discover the early-rising habit that has helped so many accomplish epic results while upgrading their happiness, helpfulness and feelings of aliveness.Through an enchanting?and often amusing?story about two struggling strangers who meet an eccentric tycoon who becomes their secret mentor, The 5 AM Club will walk you through:? How great geniuses, business titans and the world?s wisest people start their mornings to produce astonishing achievements? A little-known formula you can use instantly to wake up early feeling inspired, focused and flooded with a fiery drive to get the most out of each day ? A step-by-step method to protect the quietest hours of daybreak so you have time for exercise, self-renewal and personal growth? A neuroscience-based practice proven to help make it easy to rise while most people are sleeping, giving you precious time for yourself to think, express your creativity and begin the day peacefully instead of being rushed? ?Insider-only? tactics to defend your gifts, talents and dreams against digital distraction and trivial diversions so you enjoy fortune, influence and a magnificent impact on the world",
+            "createdAt": "2023-10-30T12:49:44.574Z",
+            "updatedAt": "2023-10-30T12:49:44.574Z",
             "__v": 0
         },
         {
-            "_id": "6536920b100cf10b1c79eb61",
-            "title": "Full Stack Developer",
-            "company": "Google",
-            "location": "Remote",
-            "description": "As a Full Stack Developer at [Your Company Name], you will play a pivotal role in the end-to-end development of our applications. You'll work on both the client and server sides, collaborating with cross-functional teams to deliver innovative solutions. If you're an adaptable and creative problem solver, this is the opportunity for you.",
-            "applicationDeadline": "2023-11-30T00:00:00.000Z",
-            "companyLogo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-            "postedAt": "2023-10-23T15:32:27.125Z",
+            "_id": "653fa755697e9f0a2e74d1de",
+            "title": "Rich Dad Poor Dad",
+            "author": " Robert T. Kiyosaki",
+            "summary": "April of 2022 marks a 25-year milestone for the personal finance classic Rich Dad Poor Dad that still ranks as the #1 Personal Finance book of all time. And although 25 years have passed since Rich Dad Poor Dad was first published,readers will find that very little in the book itself has changed ― and for good reason. While so much in our world is changing a high speed, the lessons about money and the principles of Rich Dad Poor Dad haven’t changed. Today, as money continues to play a key role in our daily lives, the messages in Robert Kiyosaki’s international bestseller are more timely and more important than ever.",
+            "createdAt": "2023-10-30T12:53:41.932Z",
+            "updatedAt": "2023-10-30T12:53:41.932Z",
             "__v": 0
         }
     ],
-    "status": "Success"
+    "status": "SUCCESS"
 }
 ```
 
-### Get single job details
+### Get single book details
 
 ```json
-route : '/api/v1/job/:jobId'
+route : '/api/v1/book/:bookId'
 request: Get
 
 response:
 {
     "result": {
-        "_id": "653691b2100cf10b1c79eb5b",
-        "title": "Mobile App Developer",
-        "company": "Google",
-        "location": "Bangalore",
-        "description": "As a Mobile App Developer at [Your Company Name], you will play a crucial role in the development, testing, and maintenance of mobile applications. You'll work closely with our team of designers and other developers to create apps that deliver exceptional user experiences. You should be passionate about staying up-to-date with the latest trends in mobile app development and have a strong desire to innovate and push the boundaries of what's possible in the mobile space.",
-        "applicationDeadline": "2023-11-30T00:00:00.000Z",
-        "companyLogo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-        "postedAt": "2023-10-23T15:30:58.856Z",
+        "_id": "653fa5cd2ee0c05683c250d6",
+        "title": "Founder's Office",
+        "author": "Sarthak Ahuja",
+        "summary": "This book is a collection of 150 impactful lessons I’ve collated over the 11 years of working with organizations of different sizes and through an extensive study on business in general.Treat it like a deck of cards with each containing a useful note, rather than one long book you need to read in order.",
+        "createdAt": "2023-10-30T12:47:09.164Z",
+        "updatedAt": "2023-10-30T12:48:27.376Z",
         "__v": 0
     },
-    "status": "Success"
+    "status": "SUCCESS"
 }
 
-```
+or
 
-### Apply for job
-
-```json
-route : '/api/v1/job/save/:userId/:jobId'
-request: Get
-
-response:
 {
-    "result": {
-        "id": "65366b6b1b3116ffeb6895fd",
-        "message": "Job saved successfully!"
-    },
+    "result": "Book with id:653fa5cd2ee0c05683c250d7 not found",
     "status": "SUCCESS"
 }
 
 ```
 
-### Get saved jobs
+### Update book details
 
 ```json
-route : '/api/v1/job/saved/:userId'
-request: Get
+route : '/api/v1/book/:bookId'
+request: PUT
+
+
+body:
+{
+    "summary":"This book is a collection of 150 impactful lessons I’ve collated over the 11 years of working with organizations of different sizes and through an extensive study on business in general.Treat it like a deck of cards with each containing a useful note, rather than one long book you need to read in order."
+}
 
 response:
 {
-    "result": [
-        {
-            "_id": "6536932f100cf10b1c79eb68",
-            "userId": "65354a2b8694dde110c84e36",
-            "jobId": {
-                "_id": "6536920b100cf10b1c79eb61",
-                "title": "Full Stack Developer",
-                "company": "Google",
-                "location": "Remote",
-                "description": "As a Full Stack Developer at [Your Company Name], you will play a pivotal role in the end-to-end development of our applications. You'll work on both the client and server sides, collaborating with cross-functional teams to deliver innovative solutions. If you're an adaptable and creative problem solver, this is the opportunity for you.",
-                "applicationDeadline": "2023-11-30T00:00:00.000Z",
-                "companyLogo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-                "postedAt": "2023-10-23T15:32:27.125Z",
-                "__v": 0
-            },
-            "savedAt": "2023-10-23T15:37:19.227Z",
-            "__v": 0
-        }
-    ],
-    "status": "Success"
+    "result": {
+        "_id": "653fa5cd2ee0c05683c250d6",
+        "title": "Founder's Office",
+        "author": "Sarthak Ahuja",
+        "summary": "This book is a collection of 150 impactful lessons I’ve collated over the 11 years of working with organizations of different sizes and through an extensive study on business in general.Treat it like a deck of cards with each containing a useful note, rather than one long book you need to read in order.",
+        "createdAt": "2023-10-30T12:47:09.164Z",
+        "updatedAt": "2023-10-30T12:48:27.376Z",
+        "__v": 0
+    },
+    "status": "SUCCESS"
 }
 
+or
+
+{
+    "result": "Book with id:653fa5cd2ee0c05683c250d7 not found",
+    "status": "SUCCESS"
+}
+
+```
+
+### DELETE book
+
+```json
+route : '/api/v1/book/:bookId'
+request: DELETE
+
+response:
+
+{
+    "result": "Book with id:653fa5cd2ee0c05683c250d6 has been deleted successfully!",
+    "status": "SUCCESS"
+}
+
+or
+
+
+{
+    "result": "Book with id:653fa6ad2ee0c05683c250e0 not found",
+    "status": "SUCCESS"
+}
 
 ```
 
