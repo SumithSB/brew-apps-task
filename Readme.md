@@ -1,8 +1,24 @@
 # Node Server
 
+## Server and project setup
+
+1. Clone the repo in your system or virtual machine using the following url - https://github.com/SumithSB/brew-apps-task
+
+2. Make sure you have latest version of MongoDB and Node.js installed in your system.
+
+3. Run "npm install" in the root folder, this will install the necessary packages which project requires.
+
+4. Add a .env file which consists "PORT" and "MONGO_URL"
+
+5. Run "npm run dev" to run the server in debug mode and test it.
+
+6. Install project manager to run the server all the time in background using pm2 package which can be installed using "npm i pm2".
+
+7. Run "pm2 start index.js" from your root folder, this will run the server in prod mode in the background.
+
 ## API Docs
 
-### Create a book Posting
+### Add new book
 
 ```json
 route : 'api/v1/book'
@@ -149,53 +165,5 @@ or
     "result": "Book with id:653fa6ad2ee0c05683c250e0 not found",
     "status": "SUCCESS"
 }
-
-```
-
-### Register User
-
-```json
-route : '/api/v1/auth/register'
-request: Post
-
-body:
-{
-    "email":"sumith@gmail.com",
-    "password":"123456",
-    "phone":"1234567890",
-    "name":"Sumith"
-}
-
-response:
-{
-    "result": {
-        "userId": "65366b431b3116ffeb6895f7",
-        "message": "User registered successfully!"
-    },
-    "status": "SUCCESS"
-}
-
-
-```
-
-### User Login
-
-```json
-route : '/api/v1/auth/login'
-request: Post
-
-body:
-{
-    "email": "sumith@gmail.com",
-    "password": "123456"
-}
-response:
-{
-    "result": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTM2NmI0MzFiMzExNmZmZWI2ODk1ZjciLCJpYXQiOjE2OTgwNjUyMjZ9.nmi7k19xvWhRpSWolKz-MUCXUXJ-IJAbSrSSHQ9WRe4"
-    },
-    "status": "Success"
-}
-
 
 ```
