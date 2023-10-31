@@ -16,6 +16,8 @@
 
 7. Run "pm2 start index.js" from your root folder, this will run the server in prod mode in the background.
 
+8. Currently the Node.js server is deployed on AWS Linux EC2 instance and apis can be accessed using the public url/ip address of the server.
+
 ## API Docs
 
 ### Add new book
