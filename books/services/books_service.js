@@ -28,7 +28,7 @@ bookService.getBookDetails = async (bookId) => {
 };
 
 bookService.updateBookDetails = async (bookId, details) => {
-  const book = await BooksModel.findOneAndUpdate({ _id: bookId }, details, { upsert: true, new: false });
+  const book = await BooksModel.findOneAndUpdate({ _id: bookId }, details);
   if (book) {
     return book;
   }
